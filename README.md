@@ -1,3 +1,3 @@
 ### Jenkins Mobile Worker
-Worker agent with tools
+Mobile Worker agent with tools
 
