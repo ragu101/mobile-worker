@@ -7,3 +7,4 @@ RUN mkdir -p /root/.ssh \
     && passwd -u root \
     && echo -e "PasswordAuthentication no" >> /etc/ssh/sshd_config \
     && sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
+#test
