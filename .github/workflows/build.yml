@@ -16,6 +16,5 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Build and push
-        run: make all
+        run: ./build.sh
 
-        
