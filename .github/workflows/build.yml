@@ -1,4 +1,4 @@
-name: CI
+name: mobile-CI
 
 on: [push]
 
@@ -16,6 +16,4 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Build and push
-        run: |
-          docker build -t ragu121/mobile-worker:latest .
-          docker push ragu121/mobile-worker:latest
+        run: make all
