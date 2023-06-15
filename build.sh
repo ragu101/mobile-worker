@@ -8,7 +8,7 @@ current_branch=$(git branch --show-current|sed 's#/#_#')
 version=""
 
 create_tag() {
-    if [[ ${current_branch} == "main" ]]; 
+    if [[ ${current_branch} == "master" ]]; 
     then
         git fetch --tags --force
         current_version_at_head=$(git tag --points-at HEAD)
