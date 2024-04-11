@@ -1,6 +1,8 @@
 FROM androidsdk/android-31
 RUN apt-get update \
-    && apt-get install openssh-server openjdk-17-jdk sudo -y
+    && apt-get install openssh-server openjdk-17-jdk software-properties-common sudo -y
+RUN add-apt-repository ppa:git-core/ppa -y \
+    && apt-get install git -y
 RUN update-java-alternatives --set $(update-java-alternatives --list|grep java-1.11|awk '{print $3}')
 RUN groupadd -g 10000 jenkins
 RUN useradd -rm -d /home/jenkins -s /bin/bash -g jenkins -G jenkins -G android -u 10000 jenkins
